@@ -16,7 +16,7 @@ const BarChart: React.FC<BarChartProps> = ({ labels, dataValues }) => {
       {
         label: "Avg Price (USD)",
         data: dataValues,
-        backgroundColor: "rgba(75, 192, 192, 0.6)",
+        backgroundColor: "#034078",
       },
     ],
   };

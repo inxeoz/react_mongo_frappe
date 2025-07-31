@@ -14,6 +14,7 @@
 import React from "react";
 import BarChart from "./chart"
 import PropertyCards from "./cards";
+import JsonFilterSearch from "./search";
 
 const Home: React.FC = async () => {
 
@@ -60,12 +61,14 @@ const Home: React.FC = async () => {
 
       <h1>Properties</h1>
       <PropertyCards data={listdata.message} />
+
+    
       
          </div>
 
-         
-   
-      
+            <JsonFilterSearch/>
+
+        
     </main>
   );
 };

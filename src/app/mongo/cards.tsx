@@ -26,7 +26,7 @@ const PropertyCards: React.FC<Props> = ({ data }) => {
         width: `${CARD_WIDTH}px`,  
         gap: "16px",
         padding: "16px",
-        background: "#83c5be",
+        background: "#ffefd3",
         borderRadius: "12px",
       
       }}
@@ -40,7 +40,7 @@ const PropertyCards: React.FC<Props> = ({ data }) => {
             borderRadius: "8px",
             padding: "16px",
             boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-            backgroundColor: "#006d77",
+            backgroundColor: "#034078",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
