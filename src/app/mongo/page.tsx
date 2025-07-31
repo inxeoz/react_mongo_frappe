@@ -13,41 +13,59 @@
 
 import React from "react";
 import BarChart from "./chart"
-// const data = {
-//   message: {
-//     labels: [
-//       "Kwun Tong",
-//       "Shek Kip Mei",
-//       "Southern District",
-//       "Kwun Tong District",
-//       "Mid-Levels",
-//       "Recreio dos Bandeirantes",
-//     ],
-//     datasets: [
-//       {
-//         name: "Avg Price (USD)",
-//         values: [2300.0, 1680.0, 1656.33, 1648.5, 1220.18, 1067.35],
-//       },
-//     ],
-//   },
-
-
-// };
+import PropertyCards from "./cards";
 
 const Home: React.FC = async () => {
 
-    const res = await fetch('http://localhost:8000/api/method/report_app_frappe.report_app_frappe.api.mongo_chart.get_mongo_chart_data')
-    const data = await res.json();
+    const chartres = await fetch('http://localhost:8000/api/method/report_app_frappe.report_app_frappe.api.mongo_chart.get_mongo_chart_data')
+    const chartdata = await chartres.json();
+
+    const list_res = await fetch('http://localhost:8000/api/method/report_app_frappe.report_app_frappe.api.mongo_chart.get_airbnb_listing_list')
+    const listdata = await list_res.json();
     
 
 
   return (
-    <main>
+    <main style={{background : "#faf3dd",
+         height: 1000
+    }
+    
+    } >
       
+      <div
+      style={{
+        justifyContent: "center",
+        alignItems: "center",
+    }}
+      > 
+
+
+
       <BarChart
-        labels={data.message.labels}
-        dataValues={data.message.datasets[0].values}
+        labels={chartdata.message.labels}
+        dataValues={chartdata.message.datasets[0].values}
       />
+
+         </div>
+
+      <br></br>
+
+      <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+    }}
+      > 
+
+      <h1>Properties</h1>
+      <PropertyCards data={listdata.message} />
+      
+         </div>
+
+         
+   
+      
     </main>
   );
 };
