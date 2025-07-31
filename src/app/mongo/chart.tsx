@@ -1,8 +1,8 @@
-"use client"; // Needed if you are using Next.js 13+ app directory
+"use client";
 
 import React from "react";
 import { Bar } from "react-chartjs-2";
-import 'chart.js/auto';
+import "chart.js/auto";
 
 interface BarChartProps {
   labels: string[];

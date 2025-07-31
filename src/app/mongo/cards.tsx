@@ -1,4 +1,4 @@
-"use client"; // For Next.js 13+ app directory
+"use client";
 
 import React from "react";
 
@@ -12,8 +12,7 @@ interface Props {
   data: Property[];
 }
 
-const CARD_HEIGHT = 150; // px
-const CARD_WIDTH = 800;
+const CARD_HEIGHT = 150;
 
 const PropertyCards: React.FC<Props> = ({ data }) => {
   return (
@@ -21,33 +20,37 @@ const PropertyCards: React.FC<Props> = ({ data }) => {
       style={{
         display: "flex",
         flexDirection: "column",
-        overflowY: "auto",           // vertical scroll
-        height: `${CARD_HEIGHT * 2.5}px`,   // fixed height
-        width: `${CARD_WIDTH}px`,  
+        alignItems: "center",
+        overflowY: "auto",
+        height: `${CARD_HEIGHT * 2.5}px`,
         gap: "16px",
         padding: "16px",
         background: "#ffefd3",
         borderRadius: "12px",
-      
+        maxWidth: "90%",
+        margin: "0 auto",
       }}
     >
       {data.map((property, idx) => (
         <div
           key={idx}
           style={{
-            height: `${CARD_HEIGHT}px`,          // fixed card height
+            width: "100%",
+            maxWidth: "800px",
+            height: `${CARD_HEIGHT}px`,
             border: "1px solid #ccc",
             borderRadius: "8px",
             padding: "16px",
-            boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
             backgroundColor: "#034078",
+            color: "#fff",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
           }}
         >
-          <h3 style={{ margin: "0 0 8px 0" }}>{property.name}</h3>
-          <p style={{ margin: "0 0 4px 0" }}>
+          <h3 style={{ marginBottom: "8px", fontSize: "18px" }}>{property.name}</h3>
+          <p style={{ margin: 0 }}>
             <strong>Price:</strong> ${property.price}
           </p>
           <p style={{ margin: 0 }}>
