@@ -2,6 +2,7 @@ import React from "react";
 import BarChart from "./chart";
 import PropertyCards from "./cards";
 import JsonFilterSearch from "./search";
+import FrappeChart from "./fchart";
 
 
 
@@ -15,7 +16,7 @@ const Home: React.FC = async () => {
   return (
     <main
       style={{
-        background: "#faf3dd",
+        background: "#f8f9fa",
         minHeight: "100vh",
         padding: "40px 20px",
         display: "flex",
@@ -38,6 +39,10 @@ const Home: React.FC = async () => {
 
       <section style={{ width: "100%", maxWidth: "900px" }}>
         <JsonFilterSearch />
+      </section>
+
+         <section style={{ width: "100%", maxWidth: "900px" }}>
+           <FrappeChart />
       </section>
     </main>
   );

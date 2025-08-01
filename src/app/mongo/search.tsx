@@ -40,7 +40,7 @@ const JsonFilterSearch: React.FC = () => {
 
   return (
     <div className="mt-10 max-w-3xl mx-auto p-4">
-      <label htmlFor="filter-input" className="block font-semibold mb-2">
+      <label htmlFor="filter-input" className="block font-semibold mb-2" style={{color: "black"}}>
         Enter Filter JSON:
       </label>
       <textarea
