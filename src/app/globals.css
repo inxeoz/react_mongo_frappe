@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
-:root {
+/* :root {
   --background: #ffffff;
-  --foreground: #d4adad;
+  --foreground: #d2ebff;
   height: max-content;
-}
+} */
 
 @theme inline {
   --color-background: var(--background);
@@ -15,8 +15,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #dfbfbf;
-    --foreground: #ededed;
+    --background: #fbfdff;
+    --foreground: #fbfdff;
     height: max-content;
   }
 }
