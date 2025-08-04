@@ -20,7 +20,8 @@ const Demo = () => {
   return (
     <div style={{ color: "black", padding: '2rem', fontFamily: 'sans-serif' }}>
       <h1 style={{ marginBottom: '1rem' }}>Airbnb Report Viewer</h1>
-      <iframe
+
+      {/* <iframe
         src={`http://localhost:8000/demo?token=${token}`}
         width="100%"
         style={{
@@ -28,7 +29,19 @@ const Demo = () => {
           borderRadius: '8px',
           minHeight: '600px',
         }}
+      /> */}
+      
+
+ <iframe
+      src="http://localhost:8000/demo" 
+        width="100%"
+        style={{
+          border: '1px solid #ccc',
+          borderRadius: '8px',
+          minHeight: '600px',
+        }}
       />
+      
     </div>
   );
 };
